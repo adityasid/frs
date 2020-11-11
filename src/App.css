@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* progress bar styles */
+
+.progress-bar {
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+}
+
+/* image grid styles */
+
+.img-grid {
+  margin: 10px 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-grid {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+}
+
+.Faces-img-grid {
+  margin: 10px 0px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 20px;
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .Faces-img-grid {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+}
+
+.img-wrap {
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+.img-wrap:hover {
+  cursor: pointer;
+  outline: 5px solid blueviolet;
+}
+
+.img-wrap img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  /* width: 150px; */
+  position: absolute;
+  /* Do not scale the image */
+  object-fit: none;
+  object-position: center;
+  top: 0;
+  left: 0;
+}
+
+/* modal styles */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5000 !important;
+}
+
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+}
+
+.zIndex {
+  z-index: 0;
+}
